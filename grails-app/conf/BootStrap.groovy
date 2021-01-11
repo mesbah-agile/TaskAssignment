@@ -4,8 +4,9 @@ class BootStrap {
 
     def init = { servletContext ->
         def camelCtx = grailsApplication.mainContext.getBean('camelContext')
-        //camelCtx.addRoutes(new ApplicationRoute())
-        camelCtx.startAllRoutes()
+        camelCtx.addRoutes(new ApplicationRoute())
+        camelCtx.start()
+        log.info("Camel started")
     }
     def destroy = {
     }

@@ -56,7 +56,7 @@ grails.project.dependency.resolution = {
         runtime('org.apache.activemq:activemq-core:5.7.0')
         runtime('org.apache.activemq:activemq-camel:5.9.0')
         runtime('org.apache.activemq:activemq-pool:5.9.0')
-        runtime('org.apache.camel:camel-jms:2.13.0') {
+        runtime('org.apache.camel:camel-jms:2.14.3') {
             excludes 'spring-aop', 'spring-beans', 'spring-core', 'spring-expression', 'spring-asm', 'spring-tx', 'spring-context'
         }
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
