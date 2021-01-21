@@ -103,7 +103,7 @@ log4j.main = {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
 
-    debug   "grails.app.routes.ApplicationRoute",
+    info   "grails.app.routes.ApplicationRoute",
             "org.apache.camel",
             "grails.app.conf.BootStrap"
 
