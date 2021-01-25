@@ -4,9 +4,9 @@ import grails.rest.*
 @Resource(uri='/team', formats=['json', 'xml'])
 class Team {
 
-    String TEAM_ID
+    String teamId
     
-    static hasMany = [TEAM_ID: TeamSkill]
+    static hasMany = [teamId: TeamSkill]
     static constraints = {
     }
 }

@@ -30,34 +30,14 @@ public class MyProcess implements Processor {
     
     def body = msg.getBody(String.class)
     
-  
-    // def TASK_ID = Task.TASK_ID
-    // def SKILL = Task.SKILL
-    // List<FileData> data = (List<FileData>) msg.getBody();
-
-    // GrailsDomainClass dc = grailsApplication.getDomainClass( 'com.taskAssignment' )
-    // println(dc)
-
-    //println("This is the filename " + fileName + " " + body)
-    
-    // BufferedReader br = new BufferedReader(new FileReader(file))
-    // int iteration = 0;
-    // while ((line = br.readLine()) != null) {
-    // if(iteration == 0) {
-    //     iteration++;  
-    //     continue;
-
     def lineRange = 1..body.size()
     
-    
-    
-
     if (fileName == "task" ){
       body.eachLine{ line, lineNo ->
         if(lineRange.contains(lineNo)){
           // println(line)
           line.splitEachLine(",") {fields->
-          def task = new Task( TASK_ID: fields[0].trim(), SKILL: fields[1].trim())
+          def task = new Task( taskId: fields[0].replace("\"", "").trim(), skill: fields[1].replace("\"", "").trim())
           task.save(flush: true , failOnError: true) 
           }
         }
@@ -69,7 +49,7 @@ public class MyProcess implements Processor {
         if(lineRange.contains(lineNo)){
           // println(line)
           line.splitEachLine(",") {fields->
-          def team = new Team( TEAM_ID: fields[0].trim())
+          def team = new Team( teamId: fields[0].replace("\"", "").trim())
           team.save(flush: true , failOnError: true) 
           }
         }
@@ -80,7 +60,7 @@ public class MyProcess implements Processor {
         if(lineRange.contains(lineNo)){
           // println(line)
           line.splitEachLine(",") {fields->
-          def teamSkill = new TeamSkill( TEAM_ID: fields[0].trim(), SKILL: fields[1].trim())
+          def teamSkill = new TeamSkill( teamId: fields[0].replace("\"", "").trim(), skill: fields[1].replace("\"", "").trim())
           teamSkill.save(flush: true , failOnError: true) 
           }
         }
@@ -97,6 +77,22 @@ public class MyProcess implements Processor {
     //   }
       
     
+    // def TASK_ID = Task.TASK_ID
+    // def SKILL = Task.SKILL
+    // List<FileData> data = (List<FileData>) msg.getBody();
+
+    // GrailsDomainClass dc = grailsApplication.getDomainClass( 'com.taskAssignment' )
+    // println(dc)
+
+    //println("This is the filename " + fileName + " " + body)
+    
+    // BufferedReader br = new BufferedReader(new FileReader(file))
+    // int iteration = 0;
+    // while ((line = br.readLine()) != null) {
+    // if(iteration == 0) {
+    //     iteration++;  
+    //     continue;
+
     
     
     
