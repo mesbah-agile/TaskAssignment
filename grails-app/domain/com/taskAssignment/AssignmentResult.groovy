@@ -5,9 +5,12 @@ import grails.rest.*
 @Resource(uri='/assignmentresult', formats=['json', 'xml'])
 class AssignmentResult {
     
-    String teamId
-    String skill
-    String taskId
+    String team01
+    String team02
+    String team03
+    String team04
+    String team05
+    
 
     static constraints = {
     }
