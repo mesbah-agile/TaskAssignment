@@ -1,88 +1,202 @@
-package com.taskassignment
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Iterator;
-import java.util.Set;
-import com.taskAssignment.Task
-import com.taskAssignment.Team
-import com.taskAssignment.TeamSkill
-import com.taskAssignment.AssignmentResult
+// package com.taskassignment
+// import java.util.HashMap;
+// import java.util.Map;
+// import java.util.Iterator;
+// import java.util.Set;
+// import com.taskAssignment.Task
+// import com.taskAssignment.Team
+// import com.taskAssignment.TeamSkill
+// import com.taskAssignment.AssignmentResult
 
-import grails.transaction.Transactional
+// import grails.transaction.Transactional
 
-@Transactional
-class ProcessService {
+// @Transactional
+// class ProcessService {
 
-    def serviceMethod() {
+//     def serviceMethod() {
         
-        def a = Task.get(1)
-        println(a)
+//         def a = Task.get(1)
+//         println(a)
+//         for(int i = 1; i < alist.size(); i++ ){
+//                 if( alist.get(i) < min ){
+//                     min = alist.get(i)
+//                 }
+//             }
 
-
-
-
-
-
-        // int count = 0 
-        // // List skillList = ["SKILL_1"[],"SKILL_2"[],SKILL_3[]]
-        // // List<String> skillList = new ArrayList<String>()
-        // // skillList.add(TeamSkill.SKILL)
-        // // println("${skillList}")
-        // TeamSkill.getBody().eachLine {line -> 
-        // // println(skillList)
-        // HashMap<String, String> hmap = new HashMap<String, String>()
-        // hmap.put("12", "Chaitanya")
-        // hmap.put("2", "Rahul")
-        // hmap.put("7", "Singh")
-        // hmap.put("49", "Ajeet")
-        // hmap.put("3", "Anuj")
-        // Set set = hmap.entrySet();
-        // Iterator iterator = set.iterator();
-        // while(iterator.hasNext()) {
-        //     Map.Entry mentry = (Map.Entry)iterator.next();
-        //     System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
-        //     System.out.println(mentry.getValue());
-        // }
-        
-        
-        // // }
-
-
-        
-        // for(int i = 0; i < TeamSkill.size(); i++) {
-        //     skillList.add(TeamSkill.SKILL)
-        //     skillList.unique()
-        //     println (skillList)
-        //     //skillList[Skill_1[team_1,team_2],Skill_2[team_1],Skill_3[team_3]]
-        //     for(int j = 0; j < skillList.length(); i++){
-        //         if (Team.TEAM_ID == Task.TEAM_ID && skillList[i]==TeamSkill.SKILL){
-        //             SkillList[i[j]] = TeamSkill.TEAM_ID
-
-        //         skillList[].add
-        //         skillList
-        //         if(skillList[TEAM_ID[]].contains(Task.SKILL) == false){
-        //             skillList[TEAM_ID][].add(Task.SKILL)
-        //         }
-        //         }
-        //     }
-        // }
-        // def result = new AssignmentResult()
-        // taskList = []
-        // Task.eachLine{line ->
-        //     if(Task.SKILL == TeamSkill.SKILL ){
-        //         if (TeamSkill.TEAM_ID.taskList == 0){
-        //             result.TEAM_ID.add(Task.TASK_ID)
-        //         }if else(TeamSkill.TEAM_ID.taskList ){
-
-        //         }
-
-                
-        // }
-        // for(int i = 0, i < Task.size(), i++){
+//             int max = alist.get(0)
+//             for(int i = 1; i < alist.size(); i++ ){
+//                 if( alist.get(i) > max ){
+//                     max = alist.get(i)
+//                 }
+//             }
             
-        //     }
-        //     int count = 0 
+//             for(j in teamSkillList){
+//                 def tmSkill = j.skill
+//                 def tmId = j.teamId 
+//                 // println(tmSkill)
+//                 def c = Task.findBySkill(tmSkill)
+                
+//                 def skillTask = TeamSkill.where{skill == item.skill}.findAllByTeamId(j.teamId)
+//                 println("tskskill "+ skillTask)    
+                
+//                 // log.info(`abd "${skillTask}`)
 
-        // }
-    }
-}
+//                 // def b = T
+                
+
+//                 // def alist = [team1List.size(),team2List.size(),team3List.size(),team4List.size(),team5List.size()]
+//                 // int min = alist.get(0)
+
+//                 // for(int i = 1; i < alist.size(); i++ ){
+//                 //     if( alist.get(i) < min ){
+//                 //         min = alist.get(i)
+//                 //     }
+//                 // }
+                
+//                 // int max = alist.get(0)
+//                 // for(int i = 1; i < alist.size(); i++ ){
+//                 //     if( alist.get(i) > max ){
+//                 //         max = alist.get(i)
+//                 //     }
+//                 // }
+//                 if (tmSkill == taskill){
+                    
+                    
+                                          
+//                     // println(tmId)
+//                     def teamQuery = TeamSkill.findAllByTeamId(tmId)
+//                     // println("teamquery "+teamQuery)
+
+                   
+
+
+
+//                     if(tmId == "TEAM_01"){
+//                         if(team1List.size()<= min){
+//                             team1List.add(task)
+                           
+//                             break
+//                         }else if((team1List.size() == team2List.size())|| (team1List.size() == team3List.size())|| (team1List.size() == team4List.size())|| (team1List.size() == team5List.size())){
+//                             team1List.add(task)
+//                             break
+//                         }
+//                     }else if(tmId == "TEAM_02"){
+//                         if(team2List.size()<= min){
+//                             team2List.add(task)
+//                             break
+//                         }else if ((team2List.size() == team1List.size())|| (team2List.size() == team3List.size())|| (team2List.size() == team5List.size())){
+//                             team2List.add(task)
+//                             break
+//                         }
+//                     }else if(tmId == "TEAM_03"){
+//                         if(team3List.size()<= min){
+//                             team3List.add(task)
+//                             break
+//                         }else if((team3List.size() == team1List.size())|| (team3List.size() == team2List.size())|| (team3List.size() == team5List.size())){
+//                             team3List.add(task)
+//                             break
+//                         }
+//                     }else if(tmId == "TEAM_04"){
+//                         if(team4List.size()<= min){
+//                             team4List.add(task)
+//                             break
+//                         }else if((team4List.size() == team1List.size())|| (team4List.size() == team5List.size())){
+//                             team4List.add(task)
+//                             break
+//                         }
+//                     }else if(tmId == "TEAM_05"){
+//                         if(team5List.size()<= min){
+//                             team5List.add(task)
+//                             break
+//                         }else if((team5List.size() == team1List.size())|| (team5List.size() == team2List.size())|| (team5List.size() == team3List.size())|| (team5List.size() == team4List.size())){
+//                             team5List.add(task)
+//                             break
+//                         }else {
+//                             team5List.add(task)
+//                             break
+//                         }
+                    
+//                     }
+//                     // }else if(tmId == "TEAM_01"){
+//                     //     if (team1List.size() > min){
+//                     //         if (team1List.size < max){
+//                     //             team1List.add(task)
+//                     //             break
+//                     //         }
+//                     //     }
+//                     // // } 
+//                     // }else if(tmId == "TEAM_02" && team2List.size() > min && team2List.size < max){
+//                     //     // team2List.size() + 1
+//                     //     team2List.add(task)
+//                     //         break
+//                     // }else if(tmId == "TEAM_03" && team3List.size() > min && team3List.size < max){
+//                     //     // team3List.size() + 1    
+//                     //     team3List.add(task)
+//                     //         break
+//                     // }else if(tmId == "TEAM_04" && team4List.size() > min && team4List.size < max){
+//                     //     // team4List.size() + 1    
+//                     //     team4List.add(task)
+//                     //         break
+//                     // }else if((tmId == "TEAM_05") && (team5List.size() > min) && (team5List.size < max)){
+//                     //     // team5List.size() + 1
+//                     //     team5List.add(task)
+//                     //         break
+//                     // }
+
+
+                       
+                            
+
+//                     // println("teamId: " + tmId + " taskId: " +  task)
+//                     // if(tmId == "TEAM_01" && ((team1List.size()<=team2List.size())||(team1List.size()<=team3List.size())||(team1List.size()<=team4List.size())||(team1List.size()<=team5List.size()))){
+//                     //     team1List.add(task)
+//                     //     break
+//                     // }else if(tmId == "TEAM_02" && ((team2List.size()<=team1List.size())||(team2List.size()<=team3List.size()) || (team2List.size()<=team4List.size())||(team2List.size()<=team5List.size()))){
+//                     //     team2List.add(task)
+//                     //     break
+//                     // }else if(tmId == "TEAM_03" && ((team3List.size()<=team1List.size())||(team3List.size()<=team2List.size())|| (team3List.size()<=team4List.size())||(team3List.size()<=team5List.size()))){
+//                     //     team3List.add(task)
+//                     //     break
+//                     // }else if(tmId == "TEAM_04" && ((team4List.size()<=team1List.size())||(team4List.size()<=team2List.size()) || (team4List.size()<=team3List.size())||(team4List.size()<=team5List.size()))){
+//                     //     team4List.add(task)
+//                     //     break
+//                     // }else if(tmId == "TEAM_05" && ((team5List.size()<=team1List.size())||(team5List.size()<=team2List.size()) ||(team5List.size()<=team3List.size())||(team5List.size()<=team4List.size()))){
+//                     //     team5List.add(task)
+//                     //     break
+//                     // }
+
+//                 }
+//                 // def empty = "NULL"
+//                 // if (max != team2List.size()){
+//                 //     def num = max - team2List.size()
+//                 //     for(int i = 1; i < num; i++ ){
+//                 //         team2List.add(empty)
+//                 //         println(team2List)
+//                 //     } 
+//                 // }
+                
+//             }
+//         }
+//             // println(skill)
+       
+//         // for(int i = 1; i < alist.size(); i++ ){
+            
+//         //     }
+//         // }
+        
+//         // combineList.each() {fields->
+//         //   def assignmentresult = new AssignmentResult( team01: fields[0], team02: fields[1],team03: fields[2],team04: fields[3],team05: fields[4])
+//         //   assignmentresult.save(flush: true)
+//         // } 
+            
+//         // println("Team 1: " + team1List)
+//         // println("Team 2: " + team2List)
+//         // println("Team 3: " + team3List)
+//         // println("Team 4: " + team4List)
+//         // println("Team 5: " + team5List)
+//         // println(combineList)
+
+
+
+//     }
+// }
