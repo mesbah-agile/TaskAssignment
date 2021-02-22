@@ -21,6 +21,7 @@ class RouteService {
         def ateam = teamSkillList.teamId
         def tskill = taskList.skill
         def teSkills = teamSkillList.skill
+        def 
         // println(teSkills)
 
         // println(ts)

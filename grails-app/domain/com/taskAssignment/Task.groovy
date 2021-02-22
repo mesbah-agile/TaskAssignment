@@ -7,7 +7,7 @@ class Task {
     String taskId
     String skill
     
-    static belongsTo = [skill: TeamSkill]
+    static belongsTo = TeamSkill
     static constraints = {
     }
 }

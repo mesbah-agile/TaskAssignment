@@ -6,8 +6,9 @@ class TeamSkill {
 
     String teamId
     String skill
-    static belongsTo = [teamId: Team]
-    static hasMany = [skill: Task]
+
+    static belongsTo = Team
+    static hasMany = [task: Task]
     static constraints = {
     }
 }

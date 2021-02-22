@@ -198,5 +198,13 @@
 
 
 
-//     }
+// //     }SELECT  team_skill.skill   AS SKILL,
+//            team_skill.team_id AS TEAM,
+//            Count(team_skill.team_id)
+// FROM       task
+// INNER JOIN team_skill
+// ON         task.skill = team_skill.skill 
+// GROUP BY task.skill, team_skill.team_id 
+// HAVING 
+// ORDER BY  team_skill.team_id,task.skill DESC; 
 // }
